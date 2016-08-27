@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import LeafList from './ui/LeafList';
+import './css/index.css';
 
 ReactDOM.render(
-  <App />,
+  <LeafList />,
   document.getElementById('root')
 );

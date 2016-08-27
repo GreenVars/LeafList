@@ -1,0 +1,14 @@
+.homepage {
+  text-align: center;
+}
+
+.homepage-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.homepage-text {
+    color: green;
+}
