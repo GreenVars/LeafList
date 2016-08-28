@@ -1,0 +1,72 @@
+import React from 'react';
+import IconButton from 'material-ui/IconButton';
+import Menu from 'material-ui/Menu';
+import Popover from 'material-ui/Popover';
+import Subheader from 'material-ui/Subheader'
+import Toggle from 'material-ui/Toggle';
+import MenuItem from 'material-ui/MenuItem';
+import SearchIcon from 'material-ui/svg-icons/action/search';
+import BadgeIcon from 'material-ui/svg-icons/action/dashboard';
+import AutoComplete from 'material-ui/AutoComplete'
+
+export default class SearchSite extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      open: false,
+    };
+  }
+
+  handleTouchTap = (event) => {
+    // This prevents ghost click.
+    event.preventDefault();
+
+    this.setState({
+      open: true,
+      anchorEl: event.currentTarget,
+    });
+  };
+
+  handleRequestClose = () => {
+    this.setState({
+      open: false,
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <AutoComplete dataSource={[]} hintText="Search"/>
+        <IconButton> <SearchIcon /> </IconButton>
+        <IconButton onTouchTap={this.handleTouchTap}> <BadgeIcon /> </IconButton>
+        <Popover
+          open={this.state.open}
+          anchorEl={this.state.anchorEl}
+          anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
+          targetOrigin={{horizontal: 'left', vertical: 'top'}}
+          onRequestClose={this.handleRequestClose}
+        >
+          <Menu>
+            <Subheader> Badges </Subheader>
+            <MenuItem>
+              <Toggle label="Free"/>
+            </MenuItem>
+            <MenuItem>
+              <Toggle label="Limit ads"/>
+            </MenuItem>
+            <MenuItem>
+              <Toggle label="Dev approved?"/>
+            </MenuItem>
+            <MenuItem>
+              <Toggle label="Certificate rewarded?"/>
+            </MenuItem>
+            <MenuItem>
+              <Toggle label="Highly Rated"/>
+            </MenuItem>
+          </Menu>
+        </Popover>
+      </div>
+    );
+  }
+}

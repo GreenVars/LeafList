@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LeafList from './ui/LeafList';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import LeafList from './ui/homepage/LeafList';
 import './css/index.css';
 
+const App = () => (
+  <MuiThemeProvider>
+    <LeafList />
+  </MuiThemeProvider>  
+);
+
 ReactDOM.render(
-  <LeafList />,
+  <App />,
   document.getElementById('root')
 );

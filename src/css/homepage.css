@@ -2,13 +2,69 @@
   text-align: center;
 }
 
-.homepage-header {
+#homepage-header {
   background-color: #222;
   height: 150px;
-  padding: 20px;
+  top: 0;
   color: white;
+  width: 75%;
+  padding: 0;
+  margin: 0;
+}
+
+#homepage-header header {
+  float: left;
+  position: absolute;
+  font-size: 5em;
+}
+
+#homepage-sidebar {
+  height: 100vh;
+  float: right;
+  background-color: yellow;
+  width:20vw;
 }
 
 .homepage-text {
     color: green;
+}
+
+
+.homepage-title {
+  font-size: 3em;
+}
+
+.forest-box-container {
+  float:left;
+  width: 75%;
+  height: 100%;
+}
+
+.forest-box {
+  width: 25%;
+  height: 30%;
+  border: 3px dotted black;
+  background-color: #999999;
+  float:left;
+  position:absolute;
+}
+
+.forest-name-header {
+  font-size: 20px;
+  color: green;
+}
+
+.branch-list li {
+  list-style-type: none;
+  margin: 0;
+}
+
+.tree-preview-header {
+  color:red;
+  font-size: 1.5em;
+}
+
+.tree-preview-branch-name {
+  color: purple;
+  font-size: .8em;
 }
