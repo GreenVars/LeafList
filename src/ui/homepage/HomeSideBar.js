@@ -10,6 +10,7 @@ import '../../css/homepage.css';
 const drawerStyle = {
   overflow: '',
   width: '',
+  backgroundColor: '',
 }
 
 export default class HomeSideBar extends Component {
