@@ -22,6 +22,16 @@ html, body {
   background: #F5F5F5;
 }
 
+.leaf-feed-header {
+  font-size: 1.5em;
+}
+
+.leaf-feed-icon {
+  vertical-align: text-top;
+  fill: #616161;
+  margin-left: 5px;
+}
+
 #forest-box-container {
   float:left;
   width: 73%;
@@ -75,6 +85,7 @@ html, body {
 .leaf-preview {
   padding: 10px 10px 0px 30px;
   margin-left: 10px;
+  text-align: left;
 }
 
 .leaf-favicon {

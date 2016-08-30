@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton'
 import RefreshIcon from 'material-ui/svg-icons/navigation/refresh';
 import PersonIcon from 'material-ui/svg-icons/social/person-outline';
-
+import LeafFeed from './LeafFeed';
 import '../../css/homepage.css';
 
 const drawerStyle = {
@@ -34,6 +34,9 @@ export default class HomeSideBar extends Component {
             </IconButton>
           }
         />
+        <LeafFeed feedName="hot" />
+        <LeafFeed feedName="new" />
+        <LeafFeed feedName="news" />
       </Drawer>
       )
   }
