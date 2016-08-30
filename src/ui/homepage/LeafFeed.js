@@ -20,7 +20,7 @@ const nameToIcon = {
   news: <CakeIcon {...iconProps} />,
 };
 
-const DEFAULT_ICON = WorldIcon;
+const DEFAULT_ICON = <WorldIcon {...iconProps} />;
 
 export default class LeafFeed extends Component {
   static propTypes = {
