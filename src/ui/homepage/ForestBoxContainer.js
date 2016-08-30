@@ -4,12 +4,28 @@ import Subheader from 'material-ui/Subheader'
 import ForestBox from './ForestBox';
 import '../../css/homepage.css';
 
+const headerStyle = {
+  color: '',
+  fontSize: '',
+  lineHeight: '',
+}
+
 export default class ForestBoxContainer extends Component {
   render() {
     return (
-      <div className='forest-box-container'>
-        <Subheader style={{fontSize:'2em'}}> FORESTS </Subheader>
+      <div id='forest-box-container'>
+        <Subheader
+          className='forest-box-container-header'
+          style={headerStyle}
+         >
+          FORESTS
+        </Subheader>
+
         <GridList
+          padding={25}
+          cols={3}
+          height="100%"
+          className="forest-box-grid"
         >
           <ForestBox forestName='Programming' />
           <ForestBox forestName='Math' />

@@ -36,19 +36,20 @@ export default class SearchSite extends React.Component {
 
   render() {
     return (
-      <div>
-        <AutoComplete dataSource={[]} hintText="Search"/>
-        <IconButton> <SearchIcon /> </IconButton>
-        <IconButton onTouchTap={this.handleTouchTap}> <BadgeIcon /> </IconButton>
+      <div className="site-search">
+        <AutoComplete dataSource={['this', 'is', 'a', 'placeholder']} hintText="Search"/>
+        <IconButton className='site-search-icon'> <SearchIcon /> </IconButton>
+        <IconButton className='site-search-icon' onTouchTap={this.handleTouchTap}> <BadgeIcon /> </IconButton>
         <Popover
+          className='badge-popover'
           open={this.state.open}
           anchorEl={this.state.anchorEl}
           anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
           targetOrigin={{horizontal: 'left', vertical: 'top'}}
           onRequestClose={this.handleRequestClose}
         >
+          <Subheader> Badges </Subheader>
           <Menu>
-            <Subheader> Badges </Subheader>
             <MenuItem>
               <Toggle label="Free"/>
             </MenuItem>
@@ -59,7 +60,7 @@ export default class SearchSite extends React.Component {
               <Toggle label="Dev approved?"/>
             </MenuItem>
             <MenuItem>
-              <Toggle label="Certificate rewarded?"/>
+              <Toggle label="Certificate rewarded"/>
             </MenuItem>
             <MenuItem>
               <Toggle label="Highly Rated"/>

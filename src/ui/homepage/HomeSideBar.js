@@ -7,17 +7,32 @@ import PersonIcon from 'material-ui/svg-icons/social/person-outline';
 
 import '../../css/homepage.css';
 
+const drawerStyle = {
+  overflow: '',
+  width: '',
+}
+
 export default class HomeSideBar extends Component {
   render() {
     return (
-      <Drawer containerStyle={{width:'25%'}} openSecondary={true} docked={true} >
+      <Drawer containerClassName='drawer-container'
+        containerStyle={drawerStyle}
+        openSecondary={true}
+        docked={true}
+      >
         <AppBar
           title="Grape Vine"
-          className="SideBar"
-          iconElementLeft={ <IconButton tooltip="Refresh"> <RefreshIcon /> </IconButton> }
-          iconElementRight={ <IconButton tooltip="My Account"> <PersonIcon /> </IconButton> }
+          iconElementLeft={
+            <IconButton tooltip="Refresh">
+              <RefreshIcon />
+            </IconButton>
+          }
+          iconElementRight={
+            <IconButton tooltip="My Account">
+              <PersonIcon />
+            </IconButton>
+          }
         />
-
       </Drawer>
       )
   }

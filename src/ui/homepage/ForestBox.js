@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
+import TreePreview from './TreePreview';
 import { GridTile } from 'material-ui/GridList';
 import { Card, CardTitle, CardText } from 'material-ui/Card';
+import Divider from 'material-ui/Divider';
 import '../../css/homepage.css';
 
 export default class ForestBox extends Component {
@@ -10,16 +12,23 @@ export default class ForestBox extends Component {
 
   render() {
     return (
-        <GridTile
-          className="test"
-        >
-        <Card style={{'fontSize':'2em'}}>
-          <CardTitle title={ this.props.forestName } />
-          <CardText>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </CardText>
-        </Card>
-        </GridTile>
+        <div className="forest-box">
+          <GridTile className="forest-box-grid-tile" style={{overflow: ''}}>
+          <Card className="forest-box-backprop" style={{background: ''}}>
+            <CardTitle
+              title={ this.props.forestName }
+              titleStyle={{fontSize: ''}}
+              className="forest-box-header"
+            />
+            <Divider />
+            <CardText className='forest-box-text' style={{padding: 0}}>
+              <TreePreview treeName="TREE NAME" />
+              <Divider />
+              <TreePreview treeName="TREE NAME" />
+            </CardText>
+          </Card>
+          </GridTile>
+        </div>
     )
   }
 }

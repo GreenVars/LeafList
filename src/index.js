@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import LeafList from './ui/homepage/LeafList';
 import './css/index.css';
+import theme from './ui/theme';
 
 const App = () => (
-  <MuiThemeProvider>
+  <MuiThemeProvider muiTheme={theme}>
     <LeafList />
-  </MuiThemeProvider>  
+  </MuiThemeProvider>
 );
 
 ReactDOM.render(
