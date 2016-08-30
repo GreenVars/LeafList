@@ -15,8 +15,8 @@ export default class BranchPreview extends Component {
         primaryText={ this.props.branchName }
         secondaryText="BRANCH DESCRIPTION"
         nestedItems={[
-        <LeafPreview leafName="LEAF" />,
-        <LeafPreview leafName="LEAF2" />,
+        <LeafPreview key={1} leafName="LEAF" />,
+        <LeafPreview key={2} leafName="LEAF2" />,
       ]}/>
     )
   }
