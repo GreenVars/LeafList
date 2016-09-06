@@ -173,9 +173,8 @@ module.exports = {
       ignore: [],
     }],
 
-    'react/jsx-boolean-value': 'warn',
     'react/jsx-closing-bracket-location': 'warn',
-    'react/jsx-curly-spacing': [2, "always"],
+    'react/jsx-curly-spacing': [1, "always"],
     'react/jsx-equals-spacing': 'warn',
     'react/jsx-uses-react': 'warn',
     'react/jsx-uses-vars': 'warn',
