@@ -15,12 +15,12 @@ const iconProps = {
   }
 }
 const nameToIcon = {
-  hot: <HotIcon {...iconProps} />,
-  new: <NewIcon {...iconProps} />,
-  news: <CakeIcon {...iconProps} />,
+  hot: <HotIcon { ...iconProps } />,
+  new: <NewIcon { ...iconProps } />,
+  news: <CakeIcon { ...iconProps } />,
 };
 
-const DEFAULT_ICON = <WorldIcon {...iconProps} />;
+const DEFAULT_ICON = <WorldIcon { ...iconProps } />;
 
 export default class LeafFeed extends Component {
   static propTypes = {
@@ -40,7 +40,7 @@ export default class LeafFeed extends Component {
       <List>
         <Subheader
           className="leaf-feed-header"
-          style={{fontSize:''}}
+          style={ {fontSize:''} }
         >
           { this.props.feedName.toUpperCase() }
           { this.icon }
@@ -49,7 +49,7 @@ export default class LeafFeed extends Component {
         <LeafPreview leafName="thing2"/>
         <LeafPreview leafName="thing3"/>
         <LeafPreview leafName="thing4"/>
-        <Divider style={{marginTop: '15px'}}/>
+        <Divider style={ {marginTop: '15px'} }/>
       </List>
     )
   }

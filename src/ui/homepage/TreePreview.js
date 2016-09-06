@@ -15,7 +15,8 @@ export default class TreePreview extends Component {
         <List>
           <Subheader
             className='tree-preview-header'
-            style={{fontSize: ''}}> { this.props.treeName } </Subheader>
+            style={ {fontSize: ''} }
+          > { this.props.treeName } </Subheader>
           <BranchPreview branchName="BRANCH ONE" />
           <BranchPreview branchName="BRANCH TWO" />
           </List>

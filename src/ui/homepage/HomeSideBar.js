@@ -17,9 +17,9 @@ export default class HomeSideBar extends Component {
   render() {
     return (
       <Drawer containerClassName='drawer-container'
-        containerStyle={drawerStyle}
-        openSecondary={true}
-        docked={true}
+        containerStyle={ drawerStyle }
+        openSecondary={ true }
+        docked={ true }
       >
         <AppBar
           title="Grape Vine"

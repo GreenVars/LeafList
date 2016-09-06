@@ -16,14 +16,14 @@ export default class ForestBoxContainer extends Component {
       <div id='forest-box-container'>
         <Subheader
           className='forest-box-container-header'
-          style={headerStyle}
-         >
+          style={ headerStyle }
+        >
           FORESTS
         </Subheader>
 
         <GridList
-          padding={25}
-          cols={3}
+          padding={ 25 }
+          cols={ 3 }
           height="100%"
           className="forest-box-grid"
         >
