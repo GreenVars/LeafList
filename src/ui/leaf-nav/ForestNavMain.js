@@ -14,11 +14,9 @@ export default class ForestNavMain extends Component {
       <div>
         <div className="side-bar-shifted">
           <ForestNavHeader />
+          { this.props.children }
         </div>
-
         <ForestNavSideBar />
-
-        { this.props.children }
       </div>
     );
   }

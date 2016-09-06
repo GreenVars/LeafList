@@ -6,8 +6,9 @@ export default class BranchNavigator extends Component {
   }
 
   render () {
+    const branchName = this.props.params.branchName;
     return (
-      null
+      <span> On branch| { branchName } </span>
     );
   }
 }
