@@ -166,13 +166,17 @@ module.exports = {
     // 'import/no-unresolved': ['warn', { commonjs: true }],
 
     // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
-    'react/jsx-equals-spacing': ['warn', 'never'],
     'react/jsx-no-duplicate-props': ['warn', { ignoreCase: true }],
     'react/jsx-no-undef': 'warn',
     'react/jsx-pascal-case': ['warn', {
       allowAllCaps: true,
       ignore: [],
     }],
+
+    'react/jsx-boolean-value': 'warn',
+    'react/jsx-closing-bracket-location': 'warn',
+    'react/jsx-curly-spacing': [2, "always"],
+    'react/jsx-equals-spacing': 'warn',
     'react/jsx-uses-react': 'warn',
     'react/jsx-uses-vars': 'warn',
     'react/no-deprecated': 'warn',
