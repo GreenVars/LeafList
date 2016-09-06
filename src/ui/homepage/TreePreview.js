@@ -3,9 +3,11 @@ import Subheader from 'material-ui/Subheader';
 import { List } from 'material-ui/List';
 import '../../css/homepage.css';
 import BranchPreview from './BranchPreview';
+import { Link } from 'react-router';
 
 export default class TreePreview extends Component {
   static propTypes = {
+    forestName: PropTypes.string.isRequired,
     treeName: PropTypes.string.isRequired,
   }
 
@@ -16,9 +18,13 @@ export default class TreePreview extends Component {
           <Subheader
             className='tree-preview-header'
             style={ {fontSize: ''} }
-          > { this.props.treeName } </Subheader>
-          <BranchPreview branchName="BRANCH ONE" />
-          <BranchPreview branchName="BRANCH TWO" />
+          >
+            <Link to={ `/forests/${this.props.forestName}/${this.props.treeName}` }>
+              { this.props.treeName }
+            </Link> 
+          </Subheader>
+          <BranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName } branchName="BRANCH ONE" />
+          <BranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName } branchName="BRANCH TWO" />
           </List>
         </div>
     )

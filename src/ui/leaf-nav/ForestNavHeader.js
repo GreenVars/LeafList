@@ -12,7 +12,7 @@ export default class ForestNavHeader extends Component {
     return (
         <Toolbar>
           <ToolbarGroup>
-            <LeafTrail />
+            <LeafTrail location={ this.props.location }/>
           </ToolbarGroup>
           <LocationSearch />
         </Toolbar>

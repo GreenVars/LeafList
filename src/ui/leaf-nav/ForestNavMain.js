@@ -13,7 +13,7 @@ export default class ForestNavMain extends Component {
     return (
       <div>
         <div className="side-bar-shifted">
-          <ForestNavHeader />
+          <ForestNavHeader location={ this.props.location }/>
           { this.props.children }
         </div>
         <ForestNavSideBar />

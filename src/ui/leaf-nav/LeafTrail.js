@@ -4,7 +4,9 @@ import BranchIcon from 'material-ui/svg-icons/action/timeline';
 import ForestIcon from 'material-ui/svg-icons/image/landscape';
 import HomeIcon from 'material-ui/svg-icons/action/home';
 import TreeIcon from 'material-ui/svg-icons/image/nature';
+import { Link } from 'react-router';
 
+const iconOrder = [<ForestIcon />, <TreeIcon />, <BranchIcon/>];
 
 export default class LeafTrail extends Component {
   static propTypes = {
@@ -12,48 +14,46 @@ export default class LeafTrail extends Component {
   }
 
   render () {
+    let steps = [
+                <Step>
+                  <Link to="/">
+                    <StepLabel
+                      icon={ <HomeIcon /> }
+                      style={ {height: '100%'} }
+                    >
+                      LeafList
+                    </StepLabel>
+                  </Link>
+                </Step>
+                ];
+
+    let currentPath = "/forests/"
+    const splitPath = this.props.location.pathname.split('/');
+    splitPath.shift(); // Remove leading /
+    splitPath.shift(); // Remove forests
+    if(splitPath[splitPath.length - 1] === "") {
+      splitPath.pop(); // Remove trailing /
+    }
+
+    for(let i in splitPath) {
+      currentPath += splitPath[i] + '/';
+      steps.push(
+        <Step key={ i } >
+          <Link to={ currentPath }>
+            <StepLabel
+              icon={ iconOrder[i] }
+              style={ {height: '100%'} }
+            >
+                { splitPath[i].toUpperCase() }
+            </StepLabel>
+          </Link>
+        </Step>
+      )
+    }
+
     return (
       <Stepper>
-        <a href="#">
-          <Step>
-            <StepLabel
-              icon={ <HomeIcon /> }
-              style={ {height:'100%'} }
-            >
-              LeafList
-            </StepLabel>
-          </Step>
-        </a>
-        <a href="#">
-          <Step>
-            <StepLabel
-              icon={ <ForestIcon /> }
-              style={ {height:'100%'} }
-            >
-              Forest
-            </StepLabel>
-          </Step>
-        </a>
-        <a href="#">
-          <Step>
-            <StepLabel
-              icon={ <TreeIcon  /> }
-              style={ {height:'100%'} }
-            >
-              Tree
-            </StepLabel>
-          </Step>
-        </a>
-        <a href="#">
-          <Step>
-            <StepLabel
-              icon={ <BranchIcon /> }
-              style={ {height:'100%'} }
-            >
-              Branch
-            </StepLabel>
-          </Step>
-        </a>
+        { steps }
       </Stepper>
     );
   }

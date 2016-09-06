@@ -102,3 +102,8 @@ html, body {
   cursor: pointer;
   text-decoration: underline;
 }
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
