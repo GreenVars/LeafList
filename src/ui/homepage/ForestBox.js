@@ -13,15 +13,15 @@ export default class ForestBox extends Component {
   render() {
     return (
         <div className="forest-box">
-          <GridTile className="forest-box-grid-tile" style={{overflow: ''}}>
-          <Card className="forest-box-backprop" style={{background: ''}}>
+          <GridTile className="forest-box-grid-tile" style={ {overflow: ''} }>
+          <Card className="forest-box-backprop" style={ {background: ''} }>
             <CardTitle
               title={ this.props.forestName }
-              titleStyle={{fontSize: ''}}
+              titleStyle={ {fontSize: ''} }
               className="forest-box-header"
             />
             <Divider />
-            <CardText className='forest-box-text' style={{padding: 0}}>
+            <CardText className='forest-box-text' style={ {padding: 0} }>
               <TreePreview treeName="TREE NAME" />
               <Divider />
               <TreePreview treeName="TREE NAME" />

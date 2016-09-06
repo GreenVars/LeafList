@@ -11,13 +11,14 @@ export default class BranchPreview extends Component {
   render() {
     return (
       <ListItem
-        disabled={true}
+        disabled={ true }
         primaryText={ this.props.branchName }
         secondaryText="BRANCH DESCRIPTION"
-        nestedItems={[
-        <LeafPreview key={1} leafName="LEAF" />,
-        <LeafPreview key={2} leafName="LEAF2" />,
-      ]}/>
+        nestedItems={ [
+        <LeafPreview key={ 1 } leafName="LEAF" />,
+        <LeafPreview key={ 2 } leafName="LEAF2" />,
+      ] }
+      />
     )
   }
 }
