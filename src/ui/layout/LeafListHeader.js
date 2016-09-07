@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../../assets/logo.svg';
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
-import LeafTrail from './leaf-nav/LeafTrail';
-import SearchSite from './homepage/SearchSite';
+import LeafTrail from './LeafTrail';
+import SearchSite from './SearchSite';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton/IconButton';

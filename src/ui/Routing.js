@@ -1,10 +1,9 @@
 import React from 'react';
 import { browserHistory, IndexRoute, Route, Router} from 'react-router';
-import ForestNavMain from './leaf-nav/ForestNavMain';
-import ForestNavHome from './leaf-nav/ForestNavHome';
-import TreeNavigator from './leaf-nav/TreeNavigator';
-import BranchNavigator from './leaf-nav/BranchNavigator';
-import MainLayout from './MainLayout';
+import ForestNavHome from './navigation/ForestNavHome';
+import TreeNavigator from './navigation/TreeNavigator';
+import BranchNavigator from './navigation/BranchNavigator';
+import MainLayout from './layout/MainLayout';
 import ForestBoxContainer from './homepage/ForestBoxContainer'
 
 export default function Routing (props) {

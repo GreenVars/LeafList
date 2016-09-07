@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import LeafListHeader from './LeafListHeader';
 import LeafListSideBar from './SideBar';
 
-import '../css/forest.css';
-import '../css/homepage.css';
+import '../../css/forest.css';
+import '../../css/homepage.css';
 
 export default class ForestNavMain extends Component {
   static propTypes = {
