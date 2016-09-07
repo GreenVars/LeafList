@@ -21,7 +21,7 @@ export default class LeafTrail extends Component {
                       icon={ <HomeIcon /> }
                       style={ {height: '100%'} }
                     >
-                      LeafList
+                      Home
                     </StepLabel>
                   </Link>
                 </Step>

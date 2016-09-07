@@ -6,8 +6,7 @@ html, body {
   text-align: center;
 }
 
-.homepage-header {
-  width: 75%;
+.main-header {
   background: rgb(98, 199, 103);
 }
 
@@ -33,12 +32,11 @@ html, body {
 }
 
 #forest-box-container {
-  float:left;
-  width: 73%;
-  padding-left: 1%;
+  text-align: center;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
   height: 95%;
   bottom: 0;
-  position: absolute;
 }
 
 .forest-box-grid > div {
