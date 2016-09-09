@@ -16,14 +16,16 @@ export default class BranchPreview extends Component {
       <ListItem
         disabled={ true }
         primaryText={
-          <Link to={ `/forests/${this.props.forestName}/${this.props.treeName}/${this.props.branchName}` }>
+          <Link className="branch-preview-link" to={ `/forests/${this.props.forestName}/${this.props.treeName}/${this.props.branchName}` }>
             { this.props.branchName }
           </Link>
         }
+        initiallyOpen={ this.props.open || false }
         secondaryText="BRANCH DESCRIPTION"
         nestedItems={ [
         <LeafPreview key={ 1 } leafName="LEAF" />,
         <LeafPreview key={ 2 } leafName="LEAF2" />,
+        ...(this.props.children || [])
       ] }
       />
     )

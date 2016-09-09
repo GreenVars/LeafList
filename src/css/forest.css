@@ -46,3 +46,18 @@
   padding: 0;
   text-align: left;
 }
+
+.branch-preview-list > div {
+  margin: 1em 2em;
+  background: #f1f1f1;
+  border-radius: 1em;
+}
+
+.branch-preview-link {
+  font-size: 2em;
+}
+
+.navigation-header {
+  font-size: 2.5em;
+  margin: 5px 10px;
+}
