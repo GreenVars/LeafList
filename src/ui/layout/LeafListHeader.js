@@ -1,12 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import logo from '../../assets/logo.svg';
-import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import LeafTrail from './LeafTrail';
 import SearchSite from './SearchSite';
-import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
-import IconButton from 'material-ui/IconButton/IconButton';
+import AddItemMenu from './AddItemMenu';
+import GeneralInfoDirectory from './GeneralInfoDirectory';
 
 export default class LeafListHeader extends Component {
   static propTypes = {
@@ -19,15 +17,8 @@ export default class LeafListHeader extends Component {
         <ToolbarGroup>
           <ToolbarTitle className="homepage-title" text="LeafList" />
           <img src={ logo } alt="LOGO" />
-          <IconMenu
-            iconButtonElement={ <IconButton style={ {height:'100%'} }><MenuIcon /></IconButton> }
-            anchorOrigin={ {horizontal: 'left', vertical: 'top'} }
-            targetOrigin={ {horizontal: 'left', vertical: 'top'} }
-          >
-            <MenuItem primaryText="About" />
-            <MenuItem primaryText="Author" />
-            <MenuItem primaryText="Source" />
-          </IconMenu>
+          <GeneralInfoDirectory />
+          <AddItemMenu location={ this.props.location } />
           <ToolbarSeparator />
           <LeafTrail location={ this.props.location } />
         </ToolbarGroup>
