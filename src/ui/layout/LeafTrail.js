@@ -44,7 +44,7 @@ export default class LeafTrail extends Component {
               icon={ iconOrder[i] }
               style={ {height: '100%'} }
             >
-                { splitPath[i].toUpperCase() }
+                { decodeURI(splitPath[i]).toUpperCase() }
             </StepLabel>
           </Link>
         </Step>
