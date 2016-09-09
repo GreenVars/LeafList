@@ -51,13 +51,39 @@
   margin: 1em 2em;
   background: #f1f1f1;
   border-radius: 1em;
+  box-shadow: 0px 0px 2px 0px black;
 }
 
-.branch-preview-link {
+.branch-preview-link-large {
   font-size: 2em;
 }
 
 .navigation-header {
   font-size: 2.5em;
   margin: 5px 10px;
+}
+
+.shifted-leaf-description {
+  width: 75%;
+}
+
+.leaf-preview-content {
+  display: inline-flex;
+}
+
+.icon-box {
+  display: inline-table;
+  position: absolute;
+  right: 2em;
+  background: #66bb6a;
+  border-radius: 2em;
+}
+
+.leaf-badge {
+  height: 36px;
+  padding: 0;
+}
+
+.icon-box > button {
+  width: 24px;
 }
