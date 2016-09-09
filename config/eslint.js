@@ -173,8 +173,12 @@ module.exports = {
       ignore: [],
     }],
 
+    'react/jsx-indent': [1, 2],
+    'react/jsx-indent-props': [1, 2],
+    'react/jsx-max-props-per-line': [1, { "maximum": 2 }],
     'react/jsx-closing-bracket-location': 'warn',
     'react/jsx-curly-spacing': [1, "always"],
+    'react/jsx-space-before-closing': 'warn',
     'react/jsx-equals-spacing': 'warn',
     'react/jsx-uses-react': 'warn',
     'react/jsx-uses-vars': 'warn',

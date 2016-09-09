@@ -6,7 +6,7 @@ import HomeIcon from 'material-ui/svg-icons/action/home';
 import TreeIcon from 'material-ui/svg-icons/image/nature';
 import { Link } from 'react-router';
 
-const iconOrder = [<ForestIcon />, <TreeIcon />, <BranchIcon/>];
+const iconOrder = [<ForestIcon />, <TreeIcon />, <BranchIcon />];
 
 export default class LeafTrail extends Component {
   static propTypes = {
@@ -15,17 +15,17 @@ export default class LeafTrail extends Component {
 
   render () {
     let steps = [
-                <Step>
-                  <Link to="/">
-                    <StepLabel
-                      icon={ <HomeIcon /> }
-                      style={ {height: '100%'} }
-                    >
-                      Home
-                    </StepLabel>
-                  </Link>
-                </Step>
-                ];
+      <Step key="root">
+        <Link to="/">
+          <StepLabel
+            icon={ <HomeIcon /> }
+            style={ {height: '100%'} }
+          >
+            Home
+          </StepLabel>
+        </Link>
+      </Step>
+    ];
 
     let currentPath = "/forests/"
     const splitPath = this.props.location.pathname.split('/');
@@ -52,7 +52,7 @@ export default class LeafTrail extends Component {
     }
 
     return (
-      <Stepper>
+      <Stepper linear={ false }>
         { steps }
       </Stepper>
     );

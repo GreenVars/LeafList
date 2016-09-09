@@ -14,7 +14,7 @@ export default class ForestNavMain extends Component {
     return (
       <div>
         <div className="side-bar-shifted">
-          <LeafListHeader location={ this.props.location }/>
+          <LeafListHeader location={ this.props.location } />
           { this.props.children }
         </div>
         <LeafListSideBar />

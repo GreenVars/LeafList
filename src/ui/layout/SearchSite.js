@@ -37,7 +37,7 @@ export default class SearchSite extends React.Component {
   render() {
     return (
       <div className="site-search">
-        <AutoComplete dataSource={ ['this', 'is', 'a', 'placeholder'] } hintText="Search"/>
+        <AutoComplete dataSource={ ['this', 'is', 'a', 'placeholder'] } hintText="Search" />
         <IconButton className='site-search-icon'> <SearchIcon /> </IconButton>
         <IconButton className='site-search-icon' onTouchTap={ this.handleTouchTap }> <BadgeIcon /> </IconButton>
         <Popover
@@ -51,19 +51,19 @@ export default class SearchSite extends React.Component {
           <Subheader> Badges </Subheader>
           <Menu>
             <MenuItem>
-              <Toggle label="Free"/>
+              <Toggle label="Free" />
             </MenuItem>
             <MenuItem>
-              <Toggle label="Limit ads"/>
+              <Toggle label="Limit ads" />
             </MenuItem>
             <MenuItem>
-              <Toggle label="Dev approved?"/>
+              <Toggle label="Dev approved?" />
             </MenuItem>
             <MenuItem>
-              <Toggle label="Certificate rewarded"/>
+              <Toggle label="Certificate rewarded" />
             </MenuItem>
             <MenuItem>
-              <Toggle label="Highly Rated"/>
+              <Toggle label="Highly Rated" />
             </MenuItem>
           </Menu>
         </Popover>

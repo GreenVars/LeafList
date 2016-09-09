@@ -15,24 +15,24 @@ export default class LeafListHeader extends Component {
 
   render () {
     return (
-        <Toolbar className="main-header" style={ {background: ''} }>
-          <ToolbarGroup>
-            <ToolbarTitle className="homepage-title" text="LeafList" />
-            <img src={ logo } alt="LOGO"/>
-            <IconMenu
-              iconButtonElement={ <IconButton style={ {height:'100%'} }><MenuIcon/></IconButton> }
-              anchorOrigin={ {horizontal: 'left', vertical: 'top'} }
-              targetOrigin={ {horizontal: 'left', vertical: 'top'} }
-            >
-              <MenuItem primaryText="About" />
-              <MenuItem primaryText="Author" />
-              <MenuItem primaryText="Source" />
-            </IconMenu>
-            <ToolbarSeparator />
-            <LeafTrail location={ this.props.location }/>
-          </ToolbarGroup>
-          <SearchSite />
-        </Toolbar>
+      <Toolbar className="main-header" style={ {background: ''} }>
+        <ToolbarGroup>
+          <ToolbarTitle className="homepage-title" text="LeafList" />
+          <img src={ logo } alt="LOGO" />
+          <IconMenu
+            iconButtonElement={ <IconButton style={ {height:'100%'} }><MenuIcon /></IconButton> }
+            anchorOrigin={ {horizontal: 'left', vertical: 'top'} }
+            targetOrigin={ {horizontal: 'left', vertical: 'top'} }
+          >
+            <MenuItem primaryText="About" />
+            <MenuItem primaryText="Author" />
+            <MenuItem primaryText="Source" />
+          </IconMenu>
+          <ToolbarSeparator />
+          <LeafTrail location={ this.props.location } />
+        </ToolbarGroup>
+        <SearchSite />
+      </Toolbar>
     );
   }
 }

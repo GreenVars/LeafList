@@ -13,8 +13,8 @@ export default class ForestBox extends Component {
 
   render() {
     return (
-        <div className="forest-box">
-          <GridTile className="forest-box-grid-tile" style={ {overflow: ''} }>
+      <div className="forest-box">
+        <GridTile className="forest-box-grid-tile" style={ {overflow: ''} }>
           <Card className="forest-box-backprop" style={ {background: ''} }>
             <CardTitle
               title={
@@ -32,8 +32,8 @@ export default class ForestBox extends Component {
               <TreePreview forestName={ this.props.forestName } treeName="TREE NAME" />
             </CardText>
           </Card>
-          </GridTile>
-        </div>
+        </GridTile>
+      </div>
     )
   }
 }

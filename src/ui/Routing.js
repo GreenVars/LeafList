@@ -9,9 +9,9 @@ import ForestBoxContainer from './homepage/ForestBoxContainer'
 export default function Routing (props) {
   return (
     <Router history={ browserHistory }>
-      <Route path="/" component={ MainLayout } >
+      <Route path="/" component={ MainLayout }>
         <IndexRoute component={ ForestBoxContainer } />
-        <Route path="forests/:forestName" >
+        <Route path="forests/:forestName">
           <IndexRoute component={ ForestNavHome } />
           <Route path=":treeName" component={ TreeNavigator } />
           <Route path=":treeName/:branchName" component={ BranchNavigator } />

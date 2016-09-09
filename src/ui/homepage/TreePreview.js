@@ -13,7 +13,7 @@ export default class TreePreview extends Component {
 
   render() {
     return (
-        <div className="tree-preview">
+      <div className="tree-preview">
         <List>
           <Subheader
             className='tree-preview-header'
@@ -21,12 +21,16 @@ export default class TreePreview extends Component {
           >
             <Link to={ `/forests/${this.props.forestName}/${this.props.treeName}` }>
               { this.props.treeName }
-            </Link> 
+            </Link>
           </Subheader>
-          <BranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName } branchName="BRANCH ONE" />
-          <BranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName } branchName="BRANCH TWO" />
-          </List>
-        </div>
+          <BranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
+            branchName="BRANCH ONE" 
+          />
+          <BranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
+            branchName="BRANCH TWO"
+          />
+        </List>
+      </div>
     )
   }
 }

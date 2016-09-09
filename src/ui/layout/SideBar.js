@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import FilterMenu from './FilterMenu';
@@ -27,7 +26,7 @@ export default class LeafListSideBar extends Component {
 
         <AppBar
           title="Quick Tools"
-          iconElementLeft={ <span/> }
+          iconElementLeft={ <span /> }
         />
         <SortMenu />
         <br />
