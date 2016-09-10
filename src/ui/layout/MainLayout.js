@@ -10,6 +10,14 @@ export default class ForestNavMain extends Component {
 
   }
 
+  componentWillReceiveProps() {
+    global.store.dispatch({type: "TOGGLE_LOADING"});
+  }
+
+  componentDidUpdate() {
+    global.store.dispatch({type: "TOGGLE_LOADING"});
+  }
+
   render () {
     return (
       <div>

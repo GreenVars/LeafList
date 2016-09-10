@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import logo from '../../assets/logo.svg';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import CircularProgress from 'material-ui/CircularProgress';
 import LeafTrail from './LeafTrail';
 import SearchSite from './SearchSite';
 import AddItemMenu from './AddItemMenu';
 import GeneralInfoDirectory from './GeneralInfoDirectory';
+import { connect } from 'react-redux'
 
-export default class LeafListHeader extends Component {
+class LeafListHeader extends Component {
   static propTypes = {
 
   }
@@ -22,8 +24,25 @@ export default class LeafListHeader extends Component {
           <ToolbarSeparator />
           <LeafTrail location={ this.props.location } />
         </ToolbarGroup>
-        <SearchSite />
+        <ToolbarGroup>
+          { this.props.loading ? // TODO Make indicator update properly
+            <CircularProgress size={ .5 } />
+              :
+            <span />
+          }
+          <SearchSite />
+        </ToolbarGroup>
       </Toolbar>
     );
   }
 }
+
+const mapStateToProps = function (state) {
+  return { loading: state.toggleLoading.loading }
+}
+
+const HeaderContainer = connect(
+  mapStateToProps,
+)(LeafListHeader);
+
+export default HeaderContainer;
