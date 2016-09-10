@@ -9,6 +9,7 @@ export default class ForestNavHome extends Component {
   render () {
     return (
       <div id='tree-box-container'>
+        <br />
         <GridList
           padding={ 25 }
           cols={ 3 }

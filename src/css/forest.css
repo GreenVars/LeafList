@@ -42,6 +42,20 @@
   background: #F5F5F5;
 }
 
+.tree-box-backprop > div {
+  padding-bottom: 0;
+}
+
+.tree-box-content > p:first-child {
+  margin: .5em 1.5em;
+  font-size: 1.2em;
+  text-align: justify;
+}
+.tree-box-content > p {
+  margin: .5em;
+  text-align: left;
+}
+
 .tree-box-text {
   padding: 0;
   text-align: left;
@@ -84,6 +98,19 @@
   padding: 0;
 }
 
+.mini-branch-preview {
+  text-align: left;
+}
+
+.stat-banner > button {
+  height: 100%;
+}
+
 .icon-box > button {
   width: 24px;
+}
+
+.stat-banner {
+  background: #d2d1d1;
+  margin: auto;
 }
