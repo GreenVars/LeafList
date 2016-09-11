@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Routing from './ui/Routing';
 import './css/index.css';
+import './assets/icons/css/leaflist-icons.css';
 import theme from './ui/theme';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
