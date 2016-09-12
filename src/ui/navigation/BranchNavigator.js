@@ -10,19 +10,18 @@ class BranchNavigator extends Component {
   }
 
   componentWillMount(props, context) {
-    const leafs = [ {id:1, status: 0, starred: false,},
-                    {id:2, status: 0, starred: false,},
-                    {id:3, status: 0, starred: false,},
-                    {id:4, status: 0, starred: false,},
-                    {id:5, status: 0, starred: false,},
-                    {id:6, status: 0, starred: false,},
-                    {id:7, status: 0, starred: false,},
-                    {id:8, status: 0, starred: false,},
-                    {id:9, status: 0, starred: false,},
-                    {id:10, status: 0, starred: false,},
-                    {id:11, status: 0, starred: false,},
+    const leafs = [ {id:1, status: 0, starred: false, count:0},
+                    {id:2, status: 0, starred: false, count:0},
+                    {id:3, status: 0, starred: false, count:0},
+                    {id:4, status: 0, starred: false, count:0},
+                    {id:5, status: 0, starred: false, count:0},
+                    {id:6, status: 0, starred: false, count:0},
+                    {id:7, status: 0, starred: false, count:0},
+                    {id:8, status: 0, starred: false, count:0},
+
                   ]
 
+    // eslint-disable-next-line
     leafs.map(leaf => {
       this.props.addLeaf(leaf)
     });
@@ -31,14 +30,15 @@ class BranchNavigator extends Component {
 
   render () {
     let leafs = [];
-    for (let leaf in this.props.leafs) {
-      if( this.props.leafs.hasOwnProperty( leaf ) ) {
+    for (let id in this.props.leafs) {
+      if( this.props.leafs.hasOwnProperty( id ) ) {
         let {
-          id,
+          count,
           status,
-        } = this.props.leafs[leaf];
+        } = this.props.leafs[id];
         leafs.push(
           <LeafBox key={ id }
+            count={ count }
             status={ status }
             onUp={ () => this.props.onStatusClick(id, 1) }
             onDown={ () => this.props.onStatusClick(id, -1) }

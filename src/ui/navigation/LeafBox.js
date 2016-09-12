@@ -6,7 +6,7 @@ export default function LeafBox(props) {
   return (
     <div className="leaf-box">
       <LeafBoxSide onUp={ props.onUp } onDown={ props.onDown }
-        status={ props.status } count={ 40 /*this.props.count*/ }
+        status={ props.status } count={ props.count }
         onStar={ props.onStar }
       />
       <h1>
