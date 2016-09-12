@@ -79,18 +79,23 @@
 
 .shifted-leaf-description {
   width: 75%;
+  overflow: hidden;
 }
 
 .leaf-preview-content {
   display: inline-flex;
+  overflow: inherit;
 }
 
 .icon-box {
-  display: inline-table;
-  position: absolute;
-  right: 2em;
   background: #66bb6a;
   border-radius: 2em;
+  margin: .15em;
+  padding: .1em;
+}
+
+.icon-box > div > i {
+  font-size: 1.75rem;
 }
 
 .leaf-badge {
@@ -104,10 +109,6 @@
 
 .stat-banner > button {
   height: 100%;
-}
-
-.icon-box > button {
-  width: 24px;
 }
 
 .stat-banner {
@@ -128,8 +129,12 @@
   padding: .2em;
 }
 
-.leaf-box h1 {
+.leaf-box-header {
   margin: 0 0 0 2em;
+}
+
+.leaf-box-header > .icon-box {
+  float: right;
 }
 
 .leaf-box h3 {
@@ -191,7 +196,7 @@
 
 .tooltip .tooltip-content {
     visibility: hidden;
-    width: 2em;
+    width: 10em;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -200,9 +205,9 @@
     position: absolute;
     z-index: 1;
     bottom: 120%;
-    font-size: .4em;
+    font-size: 1rem;
     left: 50%;
-    margin-left: -1em;
+    margin-left: -5em;
 }
 
 .tooltip .tooltip-content::after {

@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import IconButton from 'material-ui/IconButton';
-import PlaceholderIcon from 'material-ui/svg-icons/maps/place';
+import ActionIcon from '../layout/ActionIcon';
 
 export default class LeafIconBox extends Component {
   static propTypes = {
@@ -10,41 +9,22 @@ export default class LeafIconBox extends Component {
   render () {
     return (
       <div className="icon-box">
-        <IconButton
-          className="leaf-badge"
-          tooltip="BADGE INFO"
-          style={ {height: '', padding: ''} }
-        >
-          <PlaceholderIcon />
-        </IconButton>
-        <IconButton
-          className="leaf-badge"
-          tooltip="BADGE INFO"
-          style={ {height: '', padding: ''} }
-        >
-          <PlaceholderIcon />
-        </IconButton>
-        <IconButton
-          className="leaf-badge"
-          tooltip="BADGE INFO"
-          style={ {height: '', padding: ''} }
-        >
-          <PlaceholderIcon />
-        </IconButton>
-        <IconButton
-          className="leaf-badge"
-          tooltip="BADGE INFO"
-          style={ {height: '', padding: ''} }
-        >
-          <PlaceholderIcon />
-        </IconButton>
-        <IconButton
-          className="leaf-badge"
-          tooltip="BADGE INFO"
-          style={ {height: '', padding: ''} }
-        >
-          <PlaceholderIcon />
-        </IconButton>
+        <ActionIcon
+          className="icon-leaf"
+          tooltip="Placeholder"
+        />
+        <ActionIcon
+          className="icon-leaf"
+          tooltip="Placeholder"
+        />
+        <ActionIcon
+          className="icon-leaf"
+          tooltip="Placeholder"
+        />
+        <ActionIcon
+          className="icon-leaf"
+          tooltip="Placeholder"
+        />
       </div>
     );
   }
