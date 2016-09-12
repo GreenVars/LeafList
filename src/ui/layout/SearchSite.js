@@ -37,7 +37,7 @@ export default class SearchSite extends React.Component {
   render() {
     return (
       <div className="site-search">
-        <AutoComplete dataSource={ ['this', 'is', 'a', 'placeholder'] } hintText="Search" />
+        <AutoComplete dataSource={ ['Searching not implemented yet'] } hintText="Search" />
         <IconButton className='site-search-icon'> <SearchIcon /> </IconButton>
         <IconButton className='site-search-icon' onTouchTap={ this.handleTouchTap }> <BadgeIcon /> </IconButton>
         <Popover
