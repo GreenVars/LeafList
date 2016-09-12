@@ -132,8 +132,13 @@
   margin: 0 0 0 2em;
 }
 
+.leaf-box h3 {
+  font-size: .8em;
+  margin: 1em;
+}
+
 .leaf-box > div:first-child {
-  height: 80%;
+  height: 15em;
   box-shadow: 0 7px 10px -10px black;
 }
 
@@ -168,6 +173,11 @@
 
 .vote-indicator > i {
   font-size: 1.5em;
+}
+
+.minimal-comment {
+  font-size: .8em;
+  margin-left: 2em;
 }
 
 .tooltip {

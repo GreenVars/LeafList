@@ -1,6 +1,7 @@
 import React from 'react';
 import ActionIcon from '../layout/ActionIcon';
 import LeafBoxSide from './LeafBoxSide';
+import MinimalComment from './MinimalComment';
 
 export default function LeafBox(props) {
   return (
@@ -21,6 +22,9 @@ export default function LeafBox(props) {
 
       <div>
         <h3> Comments </h3>
+        <MinimalComment score={ 50 }> This is great </MinimalComment>
+        <MinimalComment score={ 50 }> This is great </MinimalComment>
+        <MinimalComment score={ 50 }> This is great </MinimalComment>
       </div>
     </div>
   );
