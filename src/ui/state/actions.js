@@ -19,3 +19,17 @@ export const addLeaf = (leaf) => {
     leaf: leaf,
   }
 }
+
+export const addFilter = (filter) => {
+  return {
+    type: "ADD_FILTER",
+    filter,
+  }
+}
+
+export const removeFilter = (filter) => {
+  return {
+    type: "REMOVE_FILTER",
+    filter,
+  }
+}

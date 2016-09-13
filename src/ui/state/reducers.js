@@ -48,8 +48,22 @@ const leafList = (state={}, action) => {
   }
 }
 
+const leafFilters = (state=[], action) => {
+  switch (action.type) {
+    case 'ADD_FILTER':
+      return state;
+    case 'REMOVE_FILTER':
+      console.log("Meant to remove: ");
+      console.log(action.filter);
+      return Object.assign({}, state);
+    default:
+      return state;
+  }
+}
+
 const AppReducers = combineReducers({
   toggleLoading,
+  leafFilters,
   leafList,
 });
 
