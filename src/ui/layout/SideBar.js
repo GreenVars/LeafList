@@ -27,13 +27,12 @@ function LeafListSideBar(props) {
       />
       <SortMenu />
       <br />
-      <FilterMenu data={ props.filters } />
+      <FilterMenu data={ props.filters } remover={ props.removeFilter } />
     </Drawer>
   );
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.leafFilters);
   return {
     filters: state.leafFilters || [],
   }
@@ -41,8 +40,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    removeFilter: () => {
-      dispatch(removeFilter(null));
+    removeFilter: (filter) => {
+      dispatch(removeFilter(filter));
     }
   }
 }

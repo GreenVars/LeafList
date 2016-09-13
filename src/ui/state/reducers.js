@@ -51,11 +51,11 @@ const leafList = (state={}, action) => {
 const leafFilters = (state=[], action) => {
   switch (action.type) {
     case 'ADD_FILTER':
-      return state;
+      return [...state, action.filter];
     case 'REMOVE_FILTER':
       console.log("Meant to remove: ");
       console.log(action.filter);
-      return Object.assign({}, state);
+      return state;
     default:
       return state;
   }
