@@ -3,6 +3,7 @@ import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import FilterMenu from './FilterMenu';
 import SortMenu from './SortMenu';
+import QuickNav from './QuickNav';
 import { connect } from 'react-redux';
 import { removeFilter } from '../state/actions';
 
@@ -28,6 +29,7 @@ function LeafListSideBar(props) {
       <SortMenu />
       <br />
       <FilterMenu data={ props.filters } remover={ props.removeFilter } />
+      <QuickNav />
     </Drawer>
   );
 }
