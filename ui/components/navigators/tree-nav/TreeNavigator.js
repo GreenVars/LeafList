@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { GridList } from 'material-ui/GridList';
 import TreeBox from './TreeBox';
 
-export default class ForestNavHome extends Component {
+export default class TreeNavigator extends Component {
   static propTypes = {
   }
 

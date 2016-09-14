@@ -3,7 +3,7 @@ import LeafBox from './LeafBox';
 import { connect } from 'react-redux';
 import { addLeaf, setVoteStatus } from '../state/actions';
 
-class BranchNavigator extends Component {
+class LeafNavigator extends Component {
   static propTypes = {
     leafs: PropTypes.object,
     onStatusClick: PropTypes.func.isRequired,
@@ -73,9 +73,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-const BranchNavigatorContainer = connect(
+const LeafNavigatorContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(BranchNavigator);
+)(LeafNavigator);
 
-export default BranchNavigatorContainer;
+export default LeafNavigatorContainer;

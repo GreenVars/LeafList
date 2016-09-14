@@ -10,7 +10,7 @@ const headerStyle = {
   lineHeight: '',
 }
 
-export default class ForestBoxContainer extends Component {
+export default class ForestNavigator extends Component {
   render() {
     return (
       <div id='forest-box-container'>

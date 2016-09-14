@@ -3,7 +3,7 @@ import { List } from 'material-ui/List';
 import BranchPreview from '../homepage/BranchPreview';
 import LeafPreview from '../homepage/LeafPreview';
 
-export default class TreeNavigator extends Component {
+export default class BranchNavigator extends Component {
   static propTypes = {
 
   }
