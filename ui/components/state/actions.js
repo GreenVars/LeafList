@@ -33,3 +33,10 @@ export const removeFilter = (filter) => {
     filter,
   }
 }
+
+export const addBranch = (branch) => {
+  return {
+    type: "ADD_BRANCH",
+    branch,
+  }
+}
