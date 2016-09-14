@@ -1,0 +1,68 @@
+#leaf-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.leaf-box {
+  width: 42%;
+  margin: 2em;
+  background: rgb(245, 245, 245);
+  padding: .2em;
+}
+
+.leaf-box-header {
+  margin: 0 0 0 2em;
+}
+
+.leaf-box-header > .icon-box {
+  float: right;
+}
+
+.leaf-box h3 {
+  font-size: .8em;
+  margin: 1em;
+}
+
+.leaf-box > div:first-child {
+  height: 15em;
+  box-shadow: 0 7px 10px -10px black;
+}
+
+.leaf-box > div:first-child > p {
+  margin-left: 4em;
+}
+
+.leaf-box-favicon {
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 5em;
+  height: 1.5em;
+  box-shadow: 0px 0px 5px 0px;
+  background: whitesmoke;
+  margin: 0 auto;
+}
+
+.leaf-box-side {
+  height: 100%;
+  float: left;
+  width: 3em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgb(102, 187, 106);
+  box-shadow: 1px 1px 5px -1px;
+}
+
+.vote-indicator {
+  width: 100%;
+}
+
+.vote-indicator > i {
+  font-size: 1.5em;
+}
+
+.minimal-comment {
+  font-size: .8em;
+  margin-left: 2em;
+}

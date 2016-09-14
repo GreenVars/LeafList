@@ -1,3 +1,9 @@
+.drawer-container {
+  width:25%;
+  overflow: visible;
+  background: #F5F5F5;
+}
+
 .side-bar-header {
   font-size: 1.5em;
   margin-bottom: 0;

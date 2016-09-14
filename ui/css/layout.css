@@ -1,0 +1,109 @@
+.main-header {
+  background: rgb(98, 199, 103);
+}
+
+.header-button {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.side-bar-shifted {
+  margin-right: 20rem;
+}
+
+
+.tree-preview-header {
+  font-size: 2em;
+}
+
+.leaf-preview {
+  padding: 10px 10px 10px 30px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.leaf-favicon {
+  margin: 24px 0 0 0;
+  left: 0;
+}
+
+.leaf-badge {
+  height: 36px;
+  padding: 0;
+}
+
+.leaf-link {
+  text-decoration: none;
+  color: green;
+}
+
+.leaf-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.tooltip .tooltip-content {
+    visibility: hidden;
+    width: 10em;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    font-size: 1rem;
+    left: 50%;
+    margin-left: -5em;
+}
+
+.tooltip .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-content {
+    visibility: visible;
+}
+
+.shifted-leaf-description {
+  width: 75%;
+  overflow: hidden;
+}
+
+.leaf-preview-content {
+  display: inline-flex;
+  overflow: inherit;
+}
+
+.icon-box {
+  background: #66bb6a;
+  border-radius: 2em;
+  margin: .15em;
+  padding: .1em;
+}
+
+.icon-box > div > i {
+  font-size: 1.75rem;
+}

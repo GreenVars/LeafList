@@ -1,0 +1,15 @@
+.branch-preview-link-large {
+  font-size: 2em;
+}
+
+.branch-preview-list > div {
+  margin: 1em 2em;
+  background: #f1f1f1;
+  border-radius: 1em;
+  box-shadow: 0px 0px 2px 0px black;
+}
+
+.navigation-header {
+  font-size: 2.5em;
+  margin: 5px 10px;
+}

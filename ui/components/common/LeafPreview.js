@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { ListItem } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 import LeafIconBox from './LeafIconBox';
-import '../../css/homepage.css';
 
 
 const getFaviconSrc = (site) =>

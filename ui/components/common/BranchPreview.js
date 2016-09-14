@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { ListItem } from 'material-ui/List';
 import LeafPreview from './LeafPreview';
-import '../../css/homepage.css';
 import { Link } from 'react-router';
 
 export default class BranchPreview extends Component {
