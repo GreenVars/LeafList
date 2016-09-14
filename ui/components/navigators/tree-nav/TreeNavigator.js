@@ -11,6 +11,7 @@ class TreeNavigator extends Component {
 
   componentWillMount() {
     // TODO Remove placeholder w/ server info
+    // TODO This causes the data to be added every navigation but this can be fixed easily when server is running
     const data = [
       {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}, {name: "INFO", value:"1001"}, {name:"PLACEHOLDER", value:"-1"}, {name: "INPUT", value:"abc"}]},
       {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}, {name: "INFO", value:"1001"}, {name:"PLACEHOLDER", value:"-1"}, {name: "INPUT", value:"abc"}]},
