@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import LeafListHeader from './LeafListHeader';
-import LeafListSideBar from './SideBar';
+import LeafListHeader from '../components/header/LeafListHeader';
+import LeafListSideBar from '../components/sidebar/SideBar';
 
 import '../../css/forest.css';
 import '../../css/homepage.css';
 
-export default class ForestNavMain extends Component {
+export default class MainLayout extends Component {
   static propTypes = {
 
   }

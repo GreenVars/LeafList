@@ -1,24 +1,24 @@
 import React from 'react';
 import { browserHistory, IndexRoute, Route, Router} from 'react-router';
-import ForestNavHome from './navigation/ForestNavHome';
-import TreeNavigator from './navigation/TreeNavigator';
-import BranchNavigator from './navigation/BranchNavigator';
-import MainLayout from './layout/MainLayout';
-import ForestBoxContainer from './homepage/ForestBoxContainer'
-import About from './homepage/About';
-import Author from './homepage/Author';
+import TreeNavigator from '../components/navigators/tree-nav/TreeNavigator';
+import BranchNavigator from '../components/navigators/branch-nav/BranchNavigator';
+import LeafNavigator from '../components/navigators/leaf-nav/LeafNavigator';
+import MainLayout from './MainLayout';
+import ForestNavigator from '../components/navigators/forest-nav/ForestNavigator';
+import About from '../components/header/info-directory/About';
+import Author from '../components/header/info-directory/Author';
 
 export default function Routing (props) {
   return (
     <Router history={ browserHistory }>
       <Route path="/" component={ MainLayout }>
-        <IndexRoute component={ ForestBoxContainer } />
+        <IndexRoute component={ ForestNavigator } />
         <Route path="about" component={ About } />
         <Route path="author" component={ Author } />
         <Route path="forests/:forestName">
-          <IndexRoute component={ ForestNavHome } />
-          <Route path=":treeName" component={ TreeNavigator } />
-          <Route path=":treeName/:branchName" component={ BranchNavigator } />
+          <IndexRoute component={ TreeNavigator } />
+          <Route path=":treeName" component={ BranchNavigator } />
+          <Route path=":treeName/:branchName" component={ LeafNavigator } />
         </Route>
       </Route>
     </Router>
