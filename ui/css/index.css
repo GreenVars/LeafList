@@ -18,3 +18,7 @@ html, body {
 .homepage {
   text-align: center;
 }
+
+.hoverable:hover {
+  cursor: pointer;
+}

@@ -4,10 +4,11 @@ import BranchIcon from 'material-ui/svg-icons/action/timeline';
 import ForestIcon from 'material-ui/svg-icons/image/landscape';
 import HomeIcon from 'material-ui/svg-icons/action/home';
 import TreeIcon from 'material-ui/svg-icons/image/nature';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 
 const iconOrder = [<ForestIcon />, <TreeIcon />, <BranchIcon />];
 
+@withRouter
 export default class LeafTrail extends Component {
   static propTypes = {
 
@@ -15,15 +16,14 @@ export default class LeafTrail extends Component {
 
   render () {
     let steps = [
-      <Step key="root">
-        <Link to="/">
-          <StepLabel
-            icon={ <HomeIcon /> }
-            style={ {height: '100%'} }
-          >
-            Home
-          </StepLabel>
-        </Link>
+      <Step key="root" className="hoverable">
+        <StepLabel
+          onClick={ () => this.props.router.push("/") }
+          icon={ <HomeIcon /> }
+          style={ {height: '100%'} }
+        >
+          Home
+        </StepLabel>
       </Step>
     ];
 
