@@ -47,3 +47,10 @@ export const addTree = (tree) => {
     tree,
   }
 }
+
+export const setForests = (forests) => {
+  return {
+    type: "SET_FORESTS",
+    forests,
+  }
+}

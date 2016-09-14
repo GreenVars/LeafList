@@ -66,6 +66,15 @@ const treeList = (state=[], action) => {
   }
 }
 
+const forestList = (state=[], action) => {
+  switch (action.type) {
+    case 'SET_FORESTS':
+      return action.forests;
+    default:
+      return state;
+  }
+}
+
 const leafFilters = (state=[], action) => {
   switch (action.type) {
     case 'ADD_FILTER':
@@ -81,6 +90,7 @@ const leafFilters = (state=[], action) => {
 
 const AppReducers = combineReducers({
   branchList,
+  forestList,
   leafFilters,
   leafList,
   toggleLoading,

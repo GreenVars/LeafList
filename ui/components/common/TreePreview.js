@@ -6,6 +6,7 @@ import { Link } from 'react-router';
 
 export default class TreePreview extends Component {
   static propTypes = {
+    branches: PropTypes.arrayOf(PropTypes.object),
     forestName: PropTypes.string.isRequired,
     treeName: PropTypes.string.isRequired,
   }
@@ -22,12 +23,12 @@ export default class TreePreview extends Component {
               { this.props.treeName }
             </Link>
           </Subheader>
-          <BranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
-            branchName="BRANCH ONE"
-          />
-          <BranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
-            branchName="BRANCH TWO"
-          />
+          { this.props.branches.map(branch => {
+            return <BranchPreview { ...branch }
+              forestName={ this.props.forestName }
+              treeName={ this.props.treeName }
+                   />
+          }) }
         </List>
       </div>
     )

@@ -13,11 +13,10 @@ class BranchNavigator extends Component {
   componentWillMount() {
     // TODO Remove placeholder w/ server info
     const data = [
-      {name: "PLACEHOLDER", leaf: {name: "LEAF NAME"}},
-      {name: "PLACEHOLDER", leaf: {name: "LEAF NAME"}},
-      {name: "PLACEHOLDER", leaf: {name: "LEAF NAME"}},
-      {name: "PLACEHOLDER", leaf: {name: "LEAF NAME"}},
-      {name: "PLACEHOLDER", leaf: {name: "LEAF NAME"}},
+      {branchName: "PLACEHOLDER", leafs: [{leafName: "LEAF NAME", site:"twitter.com", desc:"DESCRIPTION"}]},
+      {branchName: "PLACEHOLDER", leafs: [{leafName: "LEAF NAME", site:"twitter.com", desc:"DESCRIPTION"}]},
+      {branchName: "PLACEHOLDER", leafs: [{leafName: "LEAF NAME", site:"twitter.com", desc:"DESCRIPTION"}]},
+      {branchName: "PLACEHOLDER", leafs: [{leafName: "LEAF NAME", site:"twitter.com", desc:"DESCRIPTION"}]},
     ];
 
     data.map(branch => {
@@ -33,10 +32,10 @@ class BranchNavigator extends Component {
         {
           this.props.branches.map(branch => {
             return (
-              <BranchPreview branchName={ branch.name } open
-                largeHeader { ...this.props.params }
+              <BranchPreview open largeHeader
+                { ...this.props.params }
+                { ...branch }
               >
-                <LeafPreview displayTags={ true } />
               </BranchPreview>
           )})
         }

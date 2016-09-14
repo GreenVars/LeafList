@@ -8,6 +8,7 @@ import Divider from 'material-ui/Divider';
 export default class ForestBox extends Component {
   static propTypes = {
     forestName: PropTypes.string.isRequired,
+    trees: PropTypes.arrayOf(PropTypes.object),
   }
 
   render() {
@@ -26,9 +27,11 @@ export default class ForestBox extends Component {
             />
             <Divider />
             <CardText className='forest-box-text' style={ {padding: 0} }>
-              <TreePreview forestName={ this.props.forestName } treeName="TREE NAME" />
-              <Divider />
-              <TreePreview forestName={ this.props.forestName } treeName="TREE NAME" />
+              {
+                (this.props.trees || []).map(tree => {
+                  return <TreePreview forestName={ this.props.forestName } { ...tree } />
+                })
+              }
             </CardText>
           </Card>
         </GridTile>

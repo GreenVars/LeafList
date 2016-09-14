@@ -10,6 +10,7 @@ export default class BranchPreview extends Component {
     largeHeader: PropTypes.bool,
     open: PropTypes.bool,
     treeName: PropTypes.string.isRequired,
+    leafs: PropTypes.arrayOf(PropTypes.object).isRequired,
   }
 
   render() {
@@ -23,12 +24,10 @@ export default class BranchPreview extends Component {
           </Link>
         }
         initiallyOpen={ this.props.open || false }
-        secondaryText="BRANCH DESCRIPTION"
-        nestedItems={ [
-          <LeafPreview key={ 1 } leafName="LEAF" />,
-          <LeafPreview key={ 2 } leafName="LEAF2" />,
-        this.props.children
-      ] }
+        secondaryText={ this.props.desc }
+        nestedItems={ this.props.leafs.map(leaf => {
+          return <LeafPreview { ...leaf } />
+        }) }
       />
     )
   }

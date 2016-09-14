@@ -16,10 +16,10 @@ export default class LeafPreview extends Component {
   render() {
     const secondContent = this.props.displayTags ?
       <div className="leaf-preview-content" style={ {display: '', overflow: ''} }>
-        <a href="#" className="shifted-leaf-description leaf-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a>
+        <a href="#" className="shifted-leaf-description leaf-description"> { this.props.desc } </a>
         <LeafIconBox data={ [] } />
       </div> :
-      <a href="#" className="leaf-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a> ;
+      <a href="#" className="leaf-description"> { this.props.desc }</a> ;
 
     return (
       <ListItem
@@ -29,11 +29,11 @@ export default class LeafPreview extends Component {
         style={ {padding: '', marginLeft: ''} }
         leftIcon={ <Avatar
           className="leaf-favicon"
-          src={ getFaviconSrc('medium.com') }
+          src={ getFaviconSrc(this.props.site) }
           style={ {margin: '', left: ''} }
                    /> }
         primaryText={
-          <a href="#" className="leaf-link"> LEAF TITLE </a>
+          <a href="#" className="leaf-link"> { this.props.leafName } </a>
         }
         secondaryText={
           secondContent
