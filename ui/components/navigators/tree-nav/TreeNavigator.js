@@ -60,8 +60,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    addTree: (branch) => {
-      dispatch(addTree(branch));
+    addTree: (tree) => {
+      dispatch(addTree(tree));
     }
   }
 }
