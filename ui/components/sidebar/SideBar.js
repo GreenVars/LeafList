@@ -29,7 +29,7 @@ function LeafListSideBar(props) {
       <SortMenu />
       <br />
       <FilterMenu data={ props.filters } remover={ props.removeFilter } />
-      <QuickNav />
+      <QuickNav location={ props.location } />
     </Drawer>
   );
 }

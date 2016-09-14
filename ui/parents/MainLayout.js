@@ -22,7 +22,7 @@ export default class MainLayout extends Component {
           <LeafListHeader location={ this.props.location } />
           { this.props.children }
         </div>
-        <LeafListSideBar />
+        <LeafListSideBar location={ this.props.params } />
       </div>
     );
   }
