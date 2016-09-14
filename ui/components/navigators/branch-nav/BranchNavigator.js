@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { List } from 'material-ui/List';
-import BranchPreview from '../homepage/BranchPreview';
-import LeafPreview from '../homepage/LeafPreview';
+import BranchPreview from '../../common/BranchPreview';
+import LeafPreview from '../../common/LeafPreview';
 
 export default class BranchNavigator extends Component {
   static propTypes = {

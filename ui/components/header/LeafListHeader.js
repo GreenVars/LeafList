@@ -5,7 +5,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import LeafTrail from './LeafTrail';
 import SearchSite from './SearchSite';
 import AddItemMenu from './AddItemMenu';
-import GeneralInfoDirectory from './GeneralInfoDirectory';
+import GeneralInfoDirectory from './info-directory/GeneralInfoDirectory';
 import { connect } from 'react-redux'
 
 class LeafListHeader extends Component {

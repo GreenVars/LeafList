@@ -1,5 +1,5 @@
 import React from 'react';
-import ActionIcon from './ActionIcon';
+import ActionIcon from '../common/ActionIcon';
 import AddFilterMenu from './AddFilterMenu';
 
 export default function FilterMenu(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ActionIcon from '../layout/ActionIcon';
+import ActionIcon from '../../common/ActionIcon';
 
 export default function VoteIndicator(props) {
   return (

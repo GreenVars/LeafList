@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import VoteIndicator from './VoteIndicator';
-import ActionIcon from '../layout/ActionIcon';
+import ActionIcon from '../../common/ActionIcon';
 
 const getFaviconSrc = (site) =>
   `http://www.google.com/s2/favicons?domain=${site}`

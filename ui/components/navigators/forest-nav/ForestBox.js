@@ -1,10 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import TreePreview from './TreePreview';
+import TreePreview from '../../common/TreePreview';
 import { GridTile } from 'material-ui/GridList';
 import { Card, CardTitle, CardText } from 'material-ui/Card';
 import { Link } from 'react-router';
 import Divider from 'material-ui/Divider';
-import '../../css/homepage.css';
 
 export default class ForestBox extends Component {
   static propTypes = {

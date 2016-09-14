@@ -4,7 +4,7 @@ import Routing from './Routing';
 import theme from './theme';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import reducers from './ui/state/reducers';
+import reducers from '../components/state/reducers';
 
 import '../assets/icons/css/leaflist-icons.css';
 import '../css/index.css';

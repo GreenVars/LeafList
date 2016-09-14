@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { GridList } from 'material-ui/GridList';
 import Subheader from 'material-ui/Subheader'
 import ForestBox from './ForestBox';
-import '../../css/homepage.css';
 
 const headerStyle = {
   color: '',

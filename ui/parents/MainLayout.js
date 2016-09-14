@@ -2,9 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import LeafListHeader from '../components/header/LeafListHeader';
 import LeafListSideBar from '../components/sidebar/SideBar';
 
-import '../../css/forest.css';
-import '../../css/homepage.css';
-
 export default class MainLayout extends Component {
   static propTypes = {
 

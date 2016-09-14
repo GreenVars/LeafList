@@ -1,5 +1,5 @@
 import React from 'react';
-import LeafIconBox from '../homepage/LeafIconBox';
+import LeafIconBox from '../../common/LeafIconBox';
 import LeafBoxSide from './LeafBoxSide';
 import MinimalComment from './MinimalComment';
 

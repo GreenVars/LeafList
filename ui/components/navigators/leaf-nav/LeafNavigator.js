@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import LeafBox from './LeafBox';
 import { connect } from 'react-redux';
-import { addLeaf, setVoteStatus } from '../state/actions';
+import { addLeaf, setVoteStatus } from '../../state/actions';
 
 class LeafNavigator extends Component {
   static propTypes = {
