@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { List } from 'material-ui/List';
 import BranchPreview from '../../common/BranchPreview';
-import LeafPreview from '../../common/LeafPreview';
 import { addBranch } from '../../state/actions';
 import { connect } from 'react-redux';
 

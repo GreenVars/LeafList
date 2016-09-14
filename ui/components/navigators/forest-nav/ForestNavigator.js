@@ -43,12 +43,6 @@ class ForestNavigator extends Component {
           { this.props.forests.map(forest => {
             return <ForestBox { ...forest } />
           }) }
-          <ForestBox forestName='Programming' />
-          <ForestBox forestName='Math' />
-          <ForestBox forestName='Science' />
-          <ForestBox forestName='Language' />
-          <ForestBox forestName='Business' />
-          <ForestBox forestName='Life' />
         </GridList>
       </div>
     )
