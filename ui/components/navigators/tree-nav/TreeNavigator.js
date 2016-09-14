@@ -1,9 +1,26 @@
 import React, { Component, PropTypes } from 'react';
 import { GridList } from 'material-ui/GridList';
 import TreeBox from './TreeBox';
+import { addTree } from '../../state/actions';
+import { connect } from 'react-redux';
 
-export default class TreeNavigator extends Component {
+class TreeNavigator extends Component {
   static propTypes = {
+    trees: PropTypes.arrayOf(PropTypes.object)
+  }
+
+  componentWillMount() {
+    // TODO Remove placeholder w/ server info
+    const data = [
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}]},
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}]},
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}]},
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}]},
+    ];
+
+    data.map(tree => {
+      this.props.addTree(tree);
+    });
   }
 
   render () {
@@ -16,14 +33,40 @@ export default class TreeNavigator extends Component {
           height="100%"
           className="tree-box-grid"
         >
-          <TreeBox forestName={ this.props.params.forestName } treeName='Tree1' />
-          <TreeBox forestName={ this.props.params.forestName } treeName='Tree2' />
-          <TreeBox forestName={ this.props.params.forestName } treeName='Tree3' />
-          <TreeBox forestName={ this.props.params.forestName } treeName='Tree4' />
-          <TreeBox forestName={ this.props.params.forestName } treeName='Tree5' />
-          <TreeBox forestName={ this.props.params.forestName } treeName='Tree6' />
+        { this.props.trees.map(tree => {
+            return (
+              <TreeBox
+                { ...this.props.params }
+                treeName={ tree.name }
+                branchPreviews={ tree.branchPreviews }
+                stats={ tree.stats }
+                desc={ tree.desc }
+              />
+            )
+        }) }
         </GridList>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    trees: state.treeList || [],
+  }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    addTree: (branch) => {
+      dispatch(addTree(branch));
+    }
+  }
+}
+
+const TreeNavigatorContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TreeNavigator);
+
+export default TreeNavigatorContainer;

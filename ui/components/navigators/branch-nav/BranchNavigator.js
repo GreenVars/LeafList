@@ -47,7 +47,6 @@ class BranchNavigator extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     branches: state.branchList || [],
   }

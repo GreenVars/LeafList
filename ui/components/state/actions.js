@@ -40,3 +40,10 @@ export const addBranch = (branch) => {
     branch,
   }
 }
+
+export const addTree = (tree) => {
+  return {
+    type: "ADD_TREE",
+    tree,
+  }
+}

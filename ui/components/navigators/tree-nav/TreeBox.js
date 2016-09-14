@@ -10,6 +10,9 @@ export default class TreeBox extends Component {
   static propTypes = {
     forestName: PropTypes.string.isRequired,
     treeName: PropTypes.string.isRequired,
+    branchPreviews: PropTypes.arrayOf(PropTypes.Object),
+    desc: PropTypes.string,
+    stats: PropTypes.arrayOf(PropTypes.Object),
   }
 
   render () {
@@ -30,20 +33,18 @@ export default class TreeBox extends Component {
             />
             <CardText className='tree-box-content' style={ {padding: 0} }>
               <p>
-                DESCRIPTION
+                { this.props.desc }
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
               </p>
               <Divider />
-              <MinimalBranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
-                branchName="branch1"
-              />
-              <MinimalBranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
-                branchName="branch2"
-              />
-              <MinimalBranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
-                branchName="branch3"
-              />
-              <StatBanner />
+              { this.props.branchPreviews.map(branch => {
+                  return (
+                    <MinimalBranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
+                      branchName={ branch.name }
+                    />
+                  )
+              }) }
+              <StatBanner stats={ this.props.stats } />
 
             </CardText>
           </Card>

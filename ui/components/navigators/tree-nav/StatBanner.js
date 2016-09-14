@@ -1,51 +1,22 @@
-import React, { Component, PropTypes } from 'react';
-import StatIcon from 'material-ui/svg-icons/social/poll';
-import FlatButton from 'material-ui/FlatButton';
+import React from 'react';
+import ActionIcon from '../../common/ActionIcon';
 
-export default class StatBanner extends Component {
-  static propTypes = {
-
-  }
-
-  render () {
-    return (
-      <div className="stat-banner">
-        <FlatButton
-          label="STAT"
-          labelPosition="after"
-          style={ {height:''} }
-          primary={ true }
-          icon={  <StatIcon /> }
-        />
-        <FlatButton
-          label="STAT"
-          labelPosition="after"
-          style={ {height:''} }
-          primary={ true }
-          icon={  <StatIcon /> }
-        />
-        <FlatButton
-          label="STAT"
-          labelPosition="after"
-          style={ {height:''} }
-          primary={ true }
-          icon={  <StatIcon /> }
-        />
-        <FlatButton
-          label="STAT"
-          labelPosition="after"
-          style={ {height:''} }
-          primary={ true }
-          icon={  <StatIcon /> }
-        />
-        <FlatButton
-          label="STAT"
-          labelPosition="after"
-          style={ {height:''} }
-          primary={ true }
-          icon={  <StatIcon /> }
-        />
-      </div>
-    );
-  }
+export default function StatBanner(props) {
+  return (
+    <div className="stat-banner">
+      {
+        props.stats.map(stat => {
+          return (
+            <div>
+              <ActionIcon
+                tooltip={ stat.name }
+                className={ "icon-chart" }
+              />
+              <span>{ stat.value } </span>
+            </div>
+          )
+        })
+      }
+    </div>
+  );
 }
