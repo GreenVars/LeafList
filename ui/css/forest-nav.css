@@ -42,12 +42,3 @@
   padding: 0;
   text-align: left;
 }
-
-.stat-banner > button {
-  height: 100%;
-}
-
-.stat-banner {
-  background: #d2d1d1;
-  margin: auto;
-}

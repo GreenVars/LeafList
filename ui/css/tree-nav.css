@@ -60,3 +60,15 @@
 .mini-branch-preview {
   text-align: left;
 }
+
+.stat-banner > div {
+  margin: .3em 0;
+}
+
+.stat-banner {
+  background: #d2d1d1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 1.25em;
+}

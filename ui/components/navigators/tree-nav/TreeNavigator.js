@@ -12,10 +12,11 @@ class TreeNavigator extends Component {
   componentWillMount() {
     // TODO Remove placeholder w/ server info
     const data = [
-      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}]},
-      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}]},
-      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}]},
-      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}]},
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}, {name: "INFO", value:"1001"}, {name:"PLACEHOLDER", value:"-1"}, {name: "INPUT", value:"abc"}]},
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}, {name: "INFO", value:"1001"}, {name:"PLACEHOLDER", value:"-1"}, {name: "INPUT", value:"abc"}]},
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}, {name: "INFO", value:"1001"}, {name:"PLACEHOLDER", value:"-1"}, {name: "INPUT", value:"abc"}]},
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}, {name: "INFO", value:"1001"}, {name:"PLACEHOLDER", value:"-1"}, {name: "INPUT", value:"abc"}]},
+      {name: "PLACEHOLDER", desc: "DESCRIPTION PLACEHOLDER", branchPreviews: [{name: "BRANCH NAME", desc:"DESCRIPTION"}], stats: [{name: "STAT", value:"999"}, {name: "INFO", value:"1001"}, {name:"PLACEHOLDER", value:"-1"}, {name: "INPUT", value:"abc"}]},
     ];
 
     data.map(tree => {
