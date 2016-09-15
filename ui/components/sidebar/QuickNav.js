@@ -25,7 +25,7 @@ const QuickNav = props => {
     for (let id in props.leafList) {
       if( props.leafList.hasOwnProperty( id ) ) {
         leafs.push(
-          <p> { props.leafList[id].leafName } </p>
+          <p className="hoverable"> { props.leafList[id].leafName } </p>
         )
       }
     }
@@ -49,7 +49,9 @@ const QuickNav = props => {
                 { treeHeader }
                 <h4>BRANCHES</h4>
                 { props.branchList.map(branch => {
-                    return <p> { branch.branchName } </p>
+                    return <p className="hoverable" onClick={ () =>
+                      props.router.push(`/forests/${ props.location.forestName }/${ props.location.treeName }/${ branch.branchName }`)
+                    }> { branch.branchName } </p>
                 }) }
               </div>
             )
@@ -58,7 +60,9 @@ const QuickNav = props => {
               { forestHeader }
               <h4>TREES</h4>
               { props.treeList.map(tree => {
-                  return <p> { tree.name } </p>
+                  return <p className="hoverable" onClick={ () =>
+                    props.router.push(`/forests/${ props.location.forestName }/${ tree.name }`)
+                  }> { tree.name } </p>
               }) }
             </div>
           )
@@ -66,7 +70,9 @@ const QuickNav = props => {
           <div>
             <h4>FORESTS</h4>
             { props.forestList.map(forest => {
-                return <p> { forest.forestName } </p>
+                return <p className="hoverable" onClick={ () =>
+                  props.router.push(`/forests/${ forest.forestName }`)
+                }> { forest.forestName } </p>
             }) }
           </div>
         )
