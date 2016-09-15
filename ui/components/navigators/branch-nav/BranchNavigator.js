@@ -24,18 +24,20 @@ class BranchNavigator extends Component {
   }
 
   render () {
+    let keyN = 0;
     return (
       <div>
         <p className="navigation-header"> { this.props.treeName } </p>
         <List className="branch-preview-list">
         {
           this.props.branches.map(branch => {
+            keyN += 1;
             return (
               <BranchPreview open largeHeader
                 { ...this.props.params }
                 { ...branch }
-              >
-              </BranchPreview>
+                key={ keyN }
+              />
           )})
         }
         </List>

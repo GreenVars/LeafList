@@ -10,12 +10,13 @@ export default class TreeBox extends Component {
   static propTypes = {
     forestName: PropTypes.string.isRequired,
     treeName: PropTypes.string.isRequired,
-    branchPreviews: PropTypes.arrayOf(PropTypes.Object),
+    branchPreviews: PropTypes.arrayOf(PropTypes.object),
     desc: PropTypes.string,
-    stats: PropTypes.arrayOf(PropTypes.Object),
+    stats: PropTypes.arrayOf(PropTypes.object),
   }
 
   render () {
+    let keyN = 0;
     return (
       <div className="tree-box">
         <GridTile className="tree-box-grid-tile" style={ {overflow: ''} }>
@@ -38,9 +39,10 @@ export default class TreeBox extends Component {
               </p>
               <Divider />
               { this.props.branchPreviews.map(branch => {
+                  keyN += 1
                   return (
                     <MinimalBranchPreview forestName={ this.props.forestName } treeName={ this.props.treeName }
-                      branchName={ branch.name }
+                      branchName={ branch.name } key={ keyN }
                     />
                   )
               }) }

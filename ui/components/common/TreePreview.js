@@ -12,6 +12,7 @@ export default class TreePreview extends Component {
   }
 
   render() {
+    let keyN = 0;
     return (
       <div className="tree-preview">
         <List>
@@ -24,7 +25,9 @@ export default class TreePreview extends Component {
             </Link>
           </Subheader>
           { this.props.branches.map(branch => {
+            keyN += 1;
             return <BranchPreview { ...branch }
+              key={ keyN }
               forestName={ this.props.forestName }
               treeName={ this.props.treeName }
                    />

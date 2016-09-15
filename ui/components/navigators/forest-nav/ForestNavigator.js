@@ -25,6 +25,7 @@ class ForestNavigator extends Component {
   }
 
   render() {
+    let keyN = 0;
     return (
       <div id='forest-box-container'>
         <Subheader
@@ -41,7 +42,8 @@ class ForestNavigator extends Component {
           className="forest-box-grid"
         >
           { this.props.forests.map(forest => {
-            return <ForestBox { ...forest } />
+            keyN += 1;
+            return <ForestBox { ...forest } key={ keyN } />
           }) }
         </GridList>
       </div>

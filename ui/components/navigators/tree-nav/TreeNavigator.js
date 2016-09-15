@@ -26,6 +26,7 @@ class TreeNavigator extends Component {
   }
 
   render () {
+    let keyN = 0;
     return (
       <div id='tree-box-container'>
         <br />
@@ -36,9 +37,11 @@ class TreeNavigator extends Component {
           className="tree-box-grid"
         >
         { this.props.trees.map(tree => {
+            keyN += 1;
             return (
               <TreeBox
                 { ...this.props.params }
+                key={ keyN }
                 treeName={ tree.name }
                 branchPreviews={ tree.branchPreviews }
                 stats={ tree.stats }

@@ -15,6 +15,7 @@ export default class BranchPreview extends Component {
 
   render() {
     const extraClassName = this.props.largeHeader ? "branch-preview-link-large" : "";
+    let keyN = 0;
     return (
       <ListItem
         disabled={ true }
@@ -26,7 +27,8 @@ export default class BranchPreview extends Component {
         initiallyOpen={ this.props.open || false }
         secondaryText={ this.props.desc }
         nestedItems={ this.props.leafs.map(leaf => {
-          return <LeafPreview { ...leaf } />
+          keyN += 1;
+          return <LeafPreview { ...leaf } key={ keyN } />
         }) }
       />
     )

@@ -12,6 +12,7 @@ export default class ForestBox extends Component {
   }
 
   render() {
+    let keyN = 0;
     return (
       <div className="forest-box">
         <GridTile className="forest-box-grid-tile" style={ {overflow: ''} }>
@@ -29,7 +30,11 @@ export default class ForestBox extends Component {
             <CardText className='forest-box-text' style={ {padding: 0} }>
               {
                 (this.props.trees || []).map(tree => {
-                  return <TreePreview forestName={ this.props.forestName } { ...tree } />
+                  keyN += 1;
+                  return <TreePreview forestName={ this.props.forestName }
+                    { ...tree }
+                    key={ keyN }
+                         />
                 })
               }
             </CardText>

@@ -11,14 +11,19 @@ const LeafIconBox = props => {
     {tooltip: "PLACEHOLDER", className:"icon-leaf", exclusive: false, name: 'placeholder'},
     {tooltip: "PLACEHOLDER", className:"icon-leaf", exclusive: false, name: 'placeholder'},
                               ]
+
+  let keyN = 0;
   return (
     <div className="icon-box">
       {
-        data.map(icon =>
-          <ActionIcon className={ icon.className }
+        data.map(icon => {
+          keyN += 1;
+          return <ActionIcon className={ icon.className }
+            key={ keyN }
             tooltip={ icon.tooltip }
             onClick={ () => props.addFilter(icon) }
-          />
+                 />
+        }
         )
       }
     </div>
