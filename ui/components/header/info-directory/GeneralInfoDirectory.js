@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import AboutIcon from 'material-ui/svg-icons/action/help';
 import AuthorIcon from 'material-ui/svg-icons/maps/person-pin';
 import CodeIcon from 'material-ui/svg-icons/action/code';

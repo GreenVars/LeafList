@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import ActionIcon from './ActionIcon';
 import { connect } from 'react-redux';
 import { addFilter } from '../state/actions';

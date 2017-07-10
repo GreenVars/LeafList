@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import LeafListHeader from '../components/header/LeafListHeader';
 import LeafListSideBar from '../components/sidebar/SideBar';
 

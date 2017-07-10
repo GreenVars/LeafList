@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import Dialog from 'material-ui/Dialog';
 import IconButton from 'material-ui/IconButton/IconButton';
 import AddIcon from 'material-ui/svg-icons/content/add-circle-outline';

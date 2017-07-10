@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { Step, Stepper, StepLabel } from 'material-ui/Stepper';
 import BranchIcon from 'material-ui/svg-icons/action/timeline';
 import ForestIcon from 'material-ui/svg-icons/image/landscape';

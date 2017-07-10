@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import VoteIndicator from './VoteIndicator';
 import ActionIcon from '../../common/ActionIcon';
 
